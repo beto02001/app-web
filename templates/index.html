@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="{{ url_for('static', filename = 'js/login-form.js')}}"></script>
     <script src="../static/js/audio.js"></script>
+    <script src="../static/js/canvas2.1.js"></script>
     <script src="{{ url_for('static', filename = 'js/anima.js')}}"></script>
+    <script src="../static/js/image_edit.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/estilos.css') }}">
      
     <title>MeiliSBMX</title>
@@ -89,13 +91,12 @@
         <img src="{{ url_for('static', filename = 'img/producto4.png') }}" alt="">
     </section>
 
-    <canvas id="canvas1" ></canvas>  
     <div class="video">
         <iframe src="https://www.youtube.com/embed/K1DWCijvbCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
     </div>
 
-    <script src="../static/js/image_edit.js"></script>
+    
 
       <div class="canvas10">
           <img id = "space" src = "{{ url_for('static', filename = 'img/galaxy_pic2.jpg') }}">
@@ -105,10 +106,13 @@
     <script src="../static/js/drawing_svg.js"></script>
 
       <div class = "canvas20">
-
           <canvas id="canvastu" width = "300" height="300" ></canvas>
-
       </div>
+    
+    
+    <section>
+        <canvas id="canvascuadros"  width="1200" height= "300"></canvas>
+    </section>
 
     <footer class="pie">
         <div class="izquierda">
