@@ -1,0 +1,342 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    color: whitesmoke;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/*Menu de navegacion*/
+nav{
+    background-color: #e61c4b;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 2;
+    
+}
+.navegacion .navbar-logo img{
+     width: 70px; height: 70px;
+     display: flex;
+}
+
+.navbar-principal {
+    display: flex;
+    flex-direction: row;
+}
+.barra{
+    list-style: none; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.barra li {
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.barra li a{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.2em 2.1em;
+    display: inline-block;
+    margin: 0px;
+}
+
+.barra li a:hover{
+    background-color: #fa3261;
+}
+
+.actual {
+    background-color: #fa3261;
+}
+
+.actual a{
+    text-decoration: line-through;
+}
+
+/*Partee de boton de login*/
+
+.open-button {
+    background-color: #fa3261;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer; 
+    bottom: 10px;
+    right: 28px;
+    width: 150px;
+    list-style-type: none;
+  }
+  /* El formulario emergente - oculto por defecto */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1px; /*Qué tan separado del borde*/
+    border: 3px solid #7c7678;
+    z-index: 2;
+  }
+    /* estilos al contenedor */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: #fa3261;
+        opacity: .95;
+      }
+        /* Rellena cuadro de login */
+  .form-container input[type=text], .form-container input[type=password], .form-container input[type=email] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #a8106e;
+  }
+  
+        /* Cambia de color cuando escribes, la segunda parte es para que sea typo password, crea circulitos en lugar de texto*/
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: rgb(58, 33, 33);
+    outline: none;
+  }
+    /*Estilos dee botones de botones */
+    .form-container .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: .9; /*Transparencia de botones*/
+      }
+      
+        /* Necessario para que el boton sea rojo */
+  .form-container .cancel {
+    background-color: red;
+  }
+    /* Efectos aa los botones al pasar por encima */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: .3;
+      }
+    /*Fin barra navegadora*/
+    
+  
+/*Foto de fondo*/
+.principal{
+    background: url('../img/fondo.jpeg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 7rem 6rem;
+}
+
+.principal h1{
+    display: flex;
+    font-size: 3.2rem;
+    margin-top: 2rem;
+}
+
+.principal p{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+/*Foto de fondo*/
+
+
+/*Quienes somos*/
+.quienes-somos{
+    padding: 2rem 4rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.quienes-somos h2{
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.quienes-somos p,h2{
+    text-align: justify;
+    color: #EC4067;
+}
+
+.quienes-somos p{
+    display: inline-block;
+    margin: 1.3rem 0rem 1rem 5rem;
+    color: black;  
+    font-size: 1.3rem;
+}
+/*Quienes somos*/
+
+
+.galeria{
+    width: 100%;
+    background-color: #EC4067;
+}
+
+.galeria h2{
+    display: block;
+    padding-top: 2rem;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.galeria  img{
+    vertical-align: top;
+    width: 16rem;
+    margin: 1.1rem 1.3rem 2.2rem 1.7rem;
+    padding: 5px;
+    border: 1px solid #484848;
+    opacity: .6;
+}
+
+.galeria img:hover{
+    opacity: 1;
+    border: 1px solid whitesmoke;
+}
+
+
+/*Pie de página*/
+.pie{
+    display: flex;
+    width: 100%;
+    background: #211103;
+    justify-content: space-around;
+}
+
+/*Izquierda*/
+.izquierda ul{
+    list-style: none;
+}
+
+.izquierda li a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: whitesmoke;
+}
+/*Izquierda*/
+
+/*Central*/
+.central .tel-contacto, .tel-whats{
+    width: 100%;
+    margin: 2.5rem .5rem;
+}
+
+.central img{
+    width: 1.1rem;
+}
+
+.central p{
+    display: inline-block;
+}
+/*Central*/
+
+/*Barra lateral*/
+.sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 140px;
+    right: 10px;
+    background: rgb(82, 2, 64);
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e221f3;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #064579;
+  }
+/*Derecha*/
+.derecha img{
+    width: 1.1rem;
+}
+
+.derecha p{
+    display: inline-block;
+}
+
+.derecha .siguenos{
+    margin-top: 1.3rem;
+}
+
+.derecha .insta{
+    margin-top: 2rem;
+}
+
+.derecha .face{
+    margin-top: 2rem;
+}
+/*Derecha*/
+
+#canvas1 {
+    width: 100%;
+    height: 25px;
+    background-color: #F985B6;
+    
+      border: solid rgb(27, 26, 26) 2px;
+      border-radius: 5px;
+      padding: 0%;
+    }
+    .video{
+          
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      position: relative;
+  
+    }
+    .video iframe, .video object, .video embed {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .canvas10
+    {
+        background-color: black;
+        border: 5px solid #AAAAAA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.8;
+        -webkit-filter: invert(1);
+       filter: invert(1);
+    
+    }
+    .canvas20
+    {
+        text-align: center;
+        background-color: #e61c4b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .regreso{
+        background-color: #04AA6D;
+        color: #211103;
+        padding: 20px 30px;
+        border-radius: 20px;
+    }

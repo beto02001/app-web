@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="{{ url_for('static', filename = 'js/login-form.js')}}"></script>
+    <script src="../static/js/audio.js"></script>
+    <script src="{{ url_for('static', filename = 'js/anima.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/estilos.css') }}">
+     
+    <title>MeiliSBMX</title>
+</head>
+
+<body>
+    <audio autoplay>
+        <source src="../static/media/musica.mp3" type="audio/mpeg">
+    </audio>
+    <div class="sidenav">
+        <a href="https://www.facebook.com/meilisbmx/">Facebook</a>
+        <a href="https://www.instagram.com/meili_sbmx/">Intagram</a>
+        <a  href="https://api.whatsapp.com/send?phone=525617230129&text=hola,%20quiero%20cotizar%20contigo%20un%20producto%20">WhatsApp</a>
+      </div>
+
+    <header>
+        <nav class="navegacion">
+
+            <ul class="barra">
+                <a class="navbar-logo" href="index.html">
+                    <li> <img src="{{ url_for('static', filename = 'img/logo.png')}}" alt="logo"></li>
+                </a>
+                <li><a href="#" class="actual">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Preguntas</a></li>
+                <li><a href="#">Mensaje</a></li>
+                <li> </li>
+            </ul>
+            <button class="open-button" onclick="openForm()">
+                <li>Registrar</li>
+            </button>
+            <div class="form-popup" id="myForm">
+                <form action="/registro" method="POST" class="form-container">
+                    <h1>Registrar</h1>
+
+                    <label for="nombre"><b>Nombre</b></label>
+                    <input type="text" placeholder="nombre" name="nombre" required>
+
+                    <label for="correo"><b>Correo</b></label>
+                    <input type="email" placeholder="Correo" name="correo" required>
+
+                    <label for="contra"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="contra" required>
+                    <br>
+                    <h4>Si ya estas registrado <a href="{{url_for('ingreso')}}">Haz click aqui</a>.</h4>
+                    <br>
+                    <button type="submit" class="btn">Registrar</button>
+                    <button type="button" class="btn cancel" onclick="closeForm(); carga_sonido()" >Cerrar</button>
+                </form>
+                
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="principal">
+            <h1>Women by Women</h1>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </section>
+
+        <section class="quienes-somos">
+            <h2>¿Quiénes somos?</h2>
+            <br>
+            <p>Somos la tercer smoke Boutique en México, pero la primera en estaar creada, diseñada y dirigda para la
+            industra de las mujeres.</p><br>
+            <p>Entendemos y atendemos sus necesidades, porque nos gusta fumara fumar bonito mientras dedicamos tiempo para
+            consentirnos huntando una mascarilla o humectando nuestros labios, y obvio, gastar lo justo.</p>
+        </section>
+    </main>
+    <section class="galeria">
+        <h2>Galeria</h2>
+        <img src="{{ url_for('static', filename = 'img/producto1.png') }}" alt="">
+        <img src="{{ url_for('static', filename = 'img/producto2.png') }}" alt="">
+        <img src="{{ url_for('static', filename = 'img/producto3.png') }}" alt="">
+        <img src="{{ url_for('static', filename = 'img/producto4.png') }}" alt="">
+    </section>
+
+    <canvas id="canvas1" ></canvas>  
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/K1DWCijvbCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+
+    <script src="../static/js/image_edit.js"></script>
+
+      <div class="canvas10">
+          <img id = "space" src = "{{ url_for('static', filename = 'img/galaxy_pic2.jpg') }}">
+          <canvas id="canvasjuan" width="800" height="400"></canvas>
+      </div>
+
+    <script src="../static/js/drawing_svg.js"></script>
+
+      <div class = "canvas20">
+
+          <canvas id="canvastu" width = "300" height="300" ></canvas>
+
+      </div>
+
+    <footer class="pie">
+        <div class="izquierda">
+            <ul>
+                <h2>Desarrollado por:</h2>
+                <li><a>Martínez Echegaray Luis Humberto</a></li>
+                <li><a>Granados González Eduardo</a></li>
+                <li><a>Muciño Entzana Guillermo Josué</a></li>
+                <li><a>Pichardo Franco Marco Jesús</a></li>
+                <li><a>Diana López Romero</a></li>
+            </ul>
+        </div>
+
+        <div class="central">
+            <div class="tel-contacto">
+                <h4>Teléfono de contacto:</h4>
+                <a href="tel:+525583682827">Llámanos</a>
+            </div>
+            <div class="tel-whats">
+                <h4>WhatsApp:</h4>
+                <img src="{{ url_for('static', filename = 'img/whatsapp.png') }}" alt="" class="footer-imagenes">
+                <a
+                    href="https://api.whatsapp.com/send?phone=525617230129&text=hola,%20quiero%20cotizar%20contigo%20un%20producto%20">
+                    <p>click aqui</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="derecha">
+            <div class="siguenos">
+                <h4>Síguenos en:</h4>
+            </div>
+            <div class="insta">
+                <h4>Instagram</h4>
+                <a href="https://www.instagram.com/meili_sbmx/">
+                    <p> <img src="{{ url_for('static', filename = 'img/instagram.png') }}" alt="logo instragram">@meili_sbmx</p>
+                </a>
+            </div>
+
+            <div class="face">
+                <h4>Facebook</h4>
+
+                <a href="https://www.facebook.com/meilisbmx/">
+                    <p> <img src="{{ url_for('static', filename = 'img/facebook.png') }}" alt="logo facebook">MEILI smoke boutique</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>
