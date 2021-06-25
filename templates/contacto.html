@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/contacto.css') }}">        
+        <tittle></tittle>
+    </head>
+    
+    <body>
+
+        <nav class="navegar">
+            <ul>
+                <li><a href="/"><img src="{{ url_for('static', filename = 'img/logo.png')}}" alt="Logotipo" class="logo"></a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/">Nosotros</a></li>
+                <li><a href="#">Q&A</a></li>
+            </ul>
+        </nav>
+
+        <br>
+
+        <h1>¿Tienes dudas?, Contáctanos </h1>
+        <br>
+        <p>Mandanos tus dudas a nuestro correo, llenando el siguiente formulario:</p>
+
+        <p3>Si lo prefiere, contáctenos por nuestras redes sociales</p3>
+
+        <section class="formulario">
+  
+        <form>
+            
+            <input type="text" placeholder="Nombre" maxlength="50">
+            
+            <input type="text" placeholder="Correo electrónico" maxlength="50">
+            
+            <input type="text" placeholder="Asunto" maxlength="100">
+            
+            <textarea type="text" placeholder="Mensaje" maxlength="3500" class="msj"></textarea>
+            
+            <input type="submit" value="Enviar" class="boton">
+
+        </form>
+        <br>
+        <p2>*Puedes usar el formulario anterior, por si tienes alguna queja o sugerencia sobre nuestro servicio.*</p2>
+
+    </section>
+
+    <br>
+
+    <aside>
+        
+        <div class="imagenes">
+        <article class="w"></article><a href="#"><img src="{{ url_for('static', filename = 'img/whatsapp.png') }}" width="142" height="142"/></a></article>
+        <br>
+        <article class="f"></article><a href="https://www.facebook.com/meilisbmx"><img src="{{ url_for('static', filename = 'img/facebook.png') }}" width="142" height="142"></a></article>
+        <br>
+        <article class="i"></article><a href="https://instagram.com/meili_sbmx?igshid=372v01fqs7ec"><img src="{{ url_for('static', filename = 'img/instagram.png') }}" width="142" height="142"/></a></article>
+        </div>
+
+        <div class="redes">
+            
+            <article class="w2"><a href="">Whatsapp</a> </article>
+            
+            <article class="f2"><a href="https://www.facebook.com/meilisbmx">Facebook</a> </article>
+            
+            <article class="i2"><a href="https://instagram.com/meili_sbmx?igshid=372v01fqs7ec">Instagram</a> </article>
+
+        </div>
+    </aside>
+    </body>
+
+
+
+</html>

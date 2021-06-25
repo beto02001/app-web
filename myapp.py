@@ -30,6 +30,12 @@ def registro():
 def ingreso():
     return render_template('hola.html')
 
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
+
+
 @app.route('/inicio-sesion', methods = ['POST'])
 def inicioSesion():
     nombre = request.form['nombre']
